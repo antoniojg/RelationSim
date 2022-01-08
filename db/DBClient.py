@@ -3,8 +3,6 @@ from sqlite3 import Error
 
 from helpers.HelperMethods import relationship_status_calculator
 
-
-
 class DBClient:
     
     def __init__(self, db_file):
@@ -96,7 +94,6 @@ class DBClient:
                         WHERE user_id_1 = ? AND user_id_2 = ?''', (user1, user2)).fetchone()
             
             points = point_data[0]
-            print(points)
             return relationship_status_calculator(points)
         except Error as e:
             print(e)

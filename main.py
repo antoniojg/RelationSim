@@ -11,10 +11,9 @@ db = DBClient(db_file)
 
 intents = discord.Intents.default()
 intents.members = True
-client = commands.Bot(command_prefix="!")
 bot = commands.Bot(command_prefix="$", intents= discord.Intents.default())
 
-sleep = 0
+sleep = 15
 use = 1
 
 @bot.event
